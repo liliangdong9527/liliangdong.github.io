@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170110 JavaScript复习总结</h1>
+		<h2>JavaScript 介绍</h2>
+		<p>JavaScript一种直译式脚本语言，是一种动态类型、弱类型、基于原型的语言，内置支持类型。它的解释器被称为JavaScript引擎，为浏览器的一部分，广泛用于客户端的脚本语言，最早是在HTML网页上使用，用来给HTML网页增加动态功能。</p>
+		<h3>JavaScript 的特点</h3>
+		<p>JavaScript中的数据类型分为两种：</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;基本数据类型(Number,String,Boolean,Null,Undefined...)</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;引用数据类型即对象类型(Object,Function...)</p>
+		<h3>JavaScript中for循环的作用</h3>
+		<p>for: 循环遍历数组</p>
+		<p>for(var i=0;i<2;i++){};</p>
+		<p>for in: 遍历非数组对象</p>
+		<p>var obj={};</p>
+		<p>for(var j in obj){};</p>
+		<h2>关于JavaScript中的函数</h2>
+		<h3>JavaScript中函数的几种声明方式</h3>
+		<p style="color: red;">注：函数是JavaScript的一等公民。</p>
+		<p>1、函数声明式声明</p>
+		<p>function fun(){</p><p>};</p>
+		<p>2、表达式声明</p>
+		<p>var foo = function (){</p><p>};</p>
+		<p>var fun1 = function fun2(){</p><p>};</p>
+		<p>3、匿名声明</p>
+		<p>(function fun(){</p><p>})();</p>
+		<p>4、动态声明</p>
+		<p>var fun3 = new Function("a=1","b=2","return a+b");</p>
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
