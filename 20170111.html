@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170111 函数原型及原型链</h1>
+		<h2>构造函数</h2>
+		<p>简单理解为new关键字后面的函数。</p>
+		<p>函数命名建议首字母大写。</p>
+		<h3>构造函数的特点</h3>
+		<p>1、用<i>new</i>关键字调用，没有显示的创建对象。</p>
+		<p>2、函数内部可以使用<i>this</i>关键字。<i>this</i>指向的是构造出的新对象，能直接将属性和方法赋给<i>this</i>。</p>
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实例属性：通过该构造函数创建的每个对象，都将拥有一份实例属性的单独拷贝。</p>
+		<p>3、默认不用<i>return</i>返回值。默认会返回<i>this</i>，也就是新的实例对象。<i>return</i>返回<i>Object</i> 类型时，返回的不是this，所有值类型均返回<i>this</i>。</p>
+		<h3>过程</h3>
+		<p>将构造函数的<i>this</i> 指向实例，将实例的<i>__proto__</i>属性指向构造函数的<i>prototype</i>,创建原型与对象关联。执行构造函数内部的函数代码或将构造函数的代码复制一个拷贝到实例。</p>
+		<h3>原型对象与实例对象</h3>
+		<p>在JavaScript中，每个对象都有一个与之相关联的对象，那就是它的原型对象。</p>
+		<p>类的所有实例对象都从它的原型对象上继承属性。</p>
+		<p>唯一标识：当且仅当两个对象继承自同一个原型对象时，它们才属于同一个类的实例。</p>
+		<p>构造函数拥有一个<i>prototype</i> 属性，指向原型，也就是一个对象的原型就是它的构造函数的<i>prototype</i> 属性的值。</p>
+		<p>可以通过原型来创建属性和方法。通过原型创建的属性和方法时被所有实例所共享的。也就是在一个实例中修改了该属性或方法的值，所有其他实例的属性或方法值都会受到影响。</p>
+		<p>function Person(name,age){</p><p>this.name=name;</p><p>this.age=age</p><p>}</p>
+		<p>Person.prototype.friends=["Tom","Sam"];</p><p>var p1=new Preson("Lily",24);</p>
+		<p>var p1=new Preson("Suan",20);</p><p>alert(p1.friends);//Tom,Sam</p><p>alert(p2.friends);//Tom,Sam</p>
+		<p>p1.friends.push("Bill");</p><p>alert(p1.friends);//Tom,Sam,Bill</p><p>alert(p1.friends);//Tom,Sam,Bill</p>
+		<p>建议在构造函数内定义一般成员，也就是它的值在每个实例中都将不同，尤其是对象或数组形式的值；而在原型对象中则定义一些所有实例所共享的属性，即在所有实例中，它的值可以是相同的属性。</p>
+		<p>用构造函数创建一个实例时，实例的内部也包括了一个指针，指向构造函数的原型对象。一些浏览器支持一个<i>__proto__</i> 来表示这个内部指针。</p>
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
