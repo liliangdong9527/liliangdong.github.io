@@ -54,6 +54,31 @@
 		<p>(function fun(){</p><p>})();</p>
 		<p>4、动态声明</p>
 		<p>var fun3 = new Function("a=1","b=2","return a+b");</p>
+		<h3>函数中的参数</h3>
+		<p>函数的参数分为实参和形参</p>
+		<p>function fun(a,b,c){//a,b,c是形参</p><p>}</p>
+		<p>fun(1,2,3)//1,2,3是实参</p>
+		<p>函数参数也可以输函数名</p>
+		<p>function foo(callback){</p><p>callback();</p><p>}</p>
+		<h3>添加事件侦听的方法</h3>
+		<p>Obj.onclick = fun;//常用的添加方法</p>
+		<p>function fun(e){</p><p>console.log(e.target)</p><p>}</p>
+		<p>Obj.addEventListener("mousedown",fun,false);//W3C推荐  <i style="color: red;">注意浏览器兼容</i></p>
+		<h3>关于DOM和BOM</h3>
+		<p>DOM 一般所说的DOM指的是HTML DOM，也就是W3C的DOM  <i>Document Object Model</i></p>
+		<p>BOM 各个浏览器不一,Window对象~=类</p>
+		<h3>this 的指向</h3>
+		<p>1、this指向标签</p>
+		<p>2、this指向Window</p>
+		<p>function foo(){</p><p>console.log(this);</p><p>}</p><p>foo();</p>
+		<p>3、this指向Object对象</p>
+		<p>var obj = {};</p><p>obj.fun = function (){</p><p>console.log(this);</p><p>}</p><p>obj.fun();</p>
+		<p>改变函数this的指向方法</p>
+		<p>Function.apply(Object [ , argArray]);</p>
+		<p>Function.call(Object [ , arg1[, arg2 ...]]);</p>
+		<h3>JavaScript 的渲染顺序</h3>
+		<p>自上到下，从左到右,即声明同一个函数名的函数，调用时最下层的函数会覆盖上层的函数</p>
+		<p><i>声明式和表达式共存时，声明式会自动提升到表达式前</i></p>
 		<a href="index.html">返回首页</a>
 		</div>
 	</body>
