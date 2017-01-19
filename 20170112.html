@@ -31,9 +31,32 @@
 	</head>
 	<body>
 		<div class="txtBox">
-		<h1 class="title">20170112 内置对象和事件</h1>
+		<h1 class="title">20170112 内置对象和touch事件。</h1>
 		<h2>内置对象</h2>
-		
+		<p>在js里，一切皆为或者皆可以被作为对象。可通过new一个对象或者直接以自变量形式创建变量。所有变量都有对象的性质。</p>
+		<h3>数组对象Array</h3>
+		<p>数组是值的有序集合，数组中可以存放数值，也可以存放字符串。</p>
+		<p>数组的创建可以通过 <i>var arr = [1,2,3,4,...] 。</i></p>
+		<p>数组的索引是通过数组的下标<i>arr[index]</i> 来获得且第一个的下标是0，数组的长度通过<i>arr.length</i> 属性获得。</p>
+		<h4>数组内元素的添加/删除方法</h4>
+		<p>push(): 将新元素添加到一个数组中，并返回数组的新长度值。</p>
+		<p>pop(): 移除数组中的最后一个元素并返回该元素。</p>
+		<p>shift(): 移除数组中的第一个元素并返回该元素。</p>
+		<h4>数组的其他常用方法</h4>
+		<p>reverse(): 返回一个元素顺序被反转的 Array 对象。</p>
+		<p>sort(): arr.sort(function(a,b){return b-a;}) JS数组自带排序方法(从小到大排序)。</p>
+		<h3>错误对象Error</h3>
+		<p>JS解析成功或执行时，一旦发生错误，引擎就会抛出一个错误对象，所有抛出的错误都是Error构造函数的实例。</p>
+		<p>Error构造函数接受一个参数，表示错误提示。 var err = new Error('This is Error!'); err.message;</p>
+		<p><i>注意: 根据语言标准，Error对象的实例必须有message属性表示出错时的提示信息，官方没有提及其他任何属性。大多数浏览器对Error实例还提供name和task属性，分别表示错误的名称和错误的堆栈，但它们是非标准的，不是所有浏览器都有。</i></p>
+		<h4>内置错误类型(派生对象)</h4>
+		<p>1、ReferenceError-引用错误</p>
+		<p>2、RangeError-范围错误</p>
+		<p>3、SyntaxError-语法错误</p>
+		<p>4、TypeError-类型错误</p>
+		<p>5、URIError-URI错误</p>
+		<h4>处理错误</h4>
+		<p>try{</p><p>throw "发现错误！";<p>}catch (e){</p><p>console.log(e.message);</p><p>}finally{</p><p>//无论有无错误都要执行的代码块</p><p>}</p>
 		<a href="index.html">返回首页</a>
 		</div>
 	</body>
