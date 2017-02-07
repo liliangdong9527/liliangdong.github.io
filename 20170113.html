@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170113canvas画布</h1>
+		<h2>canvas画布</h2>
+		<p>canvas标记是一个矩形区域，包含width和height两个可选属性，表示矩形区域的宽高，可以通过CSS定义，默认值为300px和150px。</p>
+		<h3>使用canvas标记结合JavaScript绘图</h3>
+		<p>1、通过canvas标记的id获取当前画布对象</p>
+		<p>var cvs = document.getElementById('myCanvas');</p>
+		<p>2、创建context对象</p>
+		<p>var ctx = cvs。getContext("2d");</p>
+		<p>3、绘制图形</p>
+		<p>ctx.fillStyle = "#ff0000";</p>
+		<p>ctx.fillRect(0,0,150,150);</p>
+		<h2>canvas的属性与方法</h2>
+		<h3>颜色、样式和阴影</h3>
+		<table border="0">
+			<tr>
+				<td><b>属性</b></td>
+				<td><b>描述</b></td>
+			</tr>
+			<tr>
+				<td>fillStyle</td>
+				<td>设置或返回用于填充绘画的颜色、渐变或模式</td>
+			</tr>
+			<tr>
+				<td>strokeStyle</td>
+				<td>设置或返回用于笔触的颜色、渐变或模式</td>
+			</tr>
+			<tr>
+				<td>shadowColor</td>
+				<td>设置或返回用于阴影的颜色</td>
+			</tr>
+			<tr>
+				<td>shadowBlur</td>
+				<td>设置或返回用于阴影的模糊级别</td>
+			</tr>
+			<tr>
+				<td>shadowOffsetX</td>
+				<td>设置或返回阴影距形状的水平距离</td>
+			</tr>
+			<tr>
+				<td>shadowOffsetY</td>
+				<td>设置或返回阴影距形状的垂直距离</td>
+			</tr>
+		</table>
+		<br />
+		<table border="0">
+			<tr>
+				<td><b>方法</b></td>
+				<td><b>描述</b></td>
+			</tr>
+			<tr>
+				<td>createLinearGradient()</td>
+				<td>创建线性渐变（用在画布内容上）</td>
+			</tr>
+			<tr>
+				<td>createPattern()</td>
+				<td>在指定的方向上重复指定的元素</td>
+			</tr>
+			<tr>
+				<td>createRadialGradient()</td>
+				<td>创建放射状/环形的渐变（用在画布内容上）</td>
+			</tr>
+			<tr>
+				<td>addColorStop()</td>
+				<td>规定渐变对象中的颜色和停止位置</td>
+			</tr>
+		</table>
+		<hr />
+		<h3>矩形</h3>
+		<table border="0">
+			<tr>
+				<td><b>方法</b></td>
+				<td><b>描述</b></td>
+			</tr>
+			<tr>
+				<td>rect()</td>
+				<td>创建矩形</td>
+			</tr>
+			<tr>
+				<td>fillRect()</td>
+				<td>绘制“被填充”的矩形</td>
+			</tr>
+			<tr>
+				<td>strokeRect()</td>
+				<td>绘制矩形（无填充）</td>
+			</tr>
+			<tr>
+				<td>clearRect()</td>
+				<td>在给定的矩形内清除指定的像素</td>
+			</tr>
+		</table>
+		<hr />
+		<h3>路径</h3>
+		<table border="0">
+			<tr>
+				<td><b>方法</b></td>
+				<td><b>描述</b></td>
+			</tr>
+			<tr>
+				<td>rect()<table border="0">
+			<tr>
+				<td><b>方法</b></td>
+				<td><b>描述</b></td>
+			</tr>
+			<tr>
+				<td>fill()</td>
+				<td>填充当前绘图（路径）</td>
+			</tr>
+			<tr>
+				<td>stroke()</td>
+				<td>绘制已定义的路径</td>
+			</tr>
+			<tr>
+				<td>beginPath()</td>
+				<td>起始一条路径，或重置当前路径</td>
+			</tr>
+			<tr>
+				<td>moveTo()</td>
+				<td>把路径移动到画布中的指定点，不创建线条</td>
+			</tr>
+			<tr>
+				<td>closePath()</td>
+				<td>创建从当前点回到起始点的路径</td>
+			</tr>
+			<tr>
+				<td>lineTo()</td>
+				<td>添加一个新点，然后在画布中创建从该点到最后指定点的线条</td>
+			</tr>
+			<tr>
+				<td>quadraticCurveTo()</td>
+				<td>创建二次贝塞尔曲线</td>
+			</tr>
+			<tr>
+				<td>bezierCurveTo()</td>
+				<td>创建三次贝塞尔曲线</td>
+			</tr>
+			<tr>
+				<td>arc()</td>
+				<td>创建弧/曲线（用于创建圆形或部分圆）</td>
+			</tr>
+			<tr>
+				<td>arcTo()</td>
+				<td>创建两切线之间的弧/曲线</td>
+			</tr>
+		</table>
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
