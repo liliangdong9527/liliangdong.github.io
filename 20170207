@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170207 jQuery的介绍与应用</h1>
+		<h2>什么是jQuery</h2>
+		<p>jQuery是一个JavaScript函数库。</p>
+		<p>jQuery库包含以下特性：</p>
+		<ul>
+			<li>HTML元素选取</li>
+			<li>HTML元素操作</li>
+			<li>CSS操作</li>
+			<li>HTML时间函数</li>
+			<li>JavaScript特效和动画</li>
+			<li>HTML DOM遍历和修改</li>
+			<li>AJAX</li>
+			<li>Utitleies</li>
+		</ul>
+		<h2>jQuery的引入及使用</h2>
+		<p>1、从jQuery官网下载：<a href="http://jquery.com/download/">http://jquery.com/download/</a></p>
+		<p>2、引入</p>
+		<p>a、本地引入js文件(在项目里应用)</p>
+		<p>b、CDN：国外：googleCDN microsoftCDN<br/>国内：百度CDN：<a href="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js">http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js</a></p>
+		<h2>XMLHttpRequest对象</h2>
+		<p>XMLHttpRequest是AJAX的基础。所有现代浏览器均支持XMLHttpRequest对象(IE5和IE6使用ActiveXObject)。XMLHttpRequest用于在后台与服务器交换数据。</p>
+		<p>3、使用：jQuery入口函数等document准备就绪后开始执行</p>
+		<p>4、选择器</p>
+		<h3>基础选择器</h3>
+		<p>1）id： $("#id")</p>
+		<p>2）class： $(".class")</P>
+		<p>3）标签/标记(节点)： $("p"),$("div")</p>
+		<p>4）通配选择器/通用选择器/全部选择器： $("*")</p>
+		<p>5）组合选择器： $("#id,.class,div")</p>
+		<h3>层级选择器</h3>
+		<p>1）后代元素选择器： $("div span")选取div里的所有的span元素</p>
+		<p>2）子元素选择器： $("div>span")选取div元素下元素名是span的子元素</P>
+		<p>3）相邻元素选择器： $(".one+div")选取class为one的下一个div兄弟元素</p>
+		<p>4）兄弟/同胞元素选择器： $("#two~div")选取id为two的元素后面所有的div兄弟元素</p>
+		<h3>过滤选择器</h3>
+		<h3>属性选择器</h3>
+		<h3>表单域选择器</h3>
+		<br />
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
