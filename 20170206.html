@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170206 ajax的介绍和使用</h1>
+		<h2>什么是AJAX</h2>
+		<p>AJAX = Asychornous JavaScript And XML (异步的JavaScript和XML)。</p>
+		<p>AJAX不是新的编程语言，而是一种使用现有标准的新方法。</p>
+		<p>AJAX是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX可以是网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某个部分进行更新。</p>
+		<h2>AJAX技术体系的组成部分</h2>
+		<p>1、XMLHttpRequest 2、JavaScript 3、DOM 4、XML</p>
+		<h2>XMLHttpRequest对象</h2>
+		<p>XMLHttpRequest是AJAX的基础。所有现代浏览器均支持XMLHttpRequest对象(IE5和IE6使用ActiveXObject)。XMLHttpRequest用于在后台与服务器交换数据。</p>
+		<h3>XMLHttpRequest对象方法</h3>
+		<table border="0">
+			<tr>
+				<td><b>方法</b></td>
+				<td><b>描述</b></td>
+			</tr>
+			<tr>
+				<td>abort()</td>
+				<td>停止当前请求</td>
+			</tr>
+			<tr>
+				<td>getAllResponseHeaders()</td>
+				<td>作为字符串返问完整的headers</td>
+			</tr>
+			<tr>
+				<td>open("method","URL"[,asyncFlag[,"userName"[, "password"]]])</td>
+				<td>设置未决的请求的目标 URL, 方法, 和其他参数</td>
+			</tr>
+			<tr>
+				<td>send(content)</td>
+				<td>发送请求</td>
+			</tr>
+			<tr>
+				<td>setRequestHeader("label", "value")</td>
+				<td>设置header并和请求一起发送</td>
+			</tr>
+		</table>
+		<h3>XMLHttpRequest对象属性</h3>
+		<table border="0">
+			<tr>
+				<td><b>属性</b></td>
+				<td><b>描述</b></td>
+			</tr>
+			<tr>
+				<td>onreadystatechange</td>
+				<td>状态改变的事件触发器</td>
+			</tr>
+			<tr>
+				<td>readyState</td>
+				<td>对象状态(integer):<br/>0 = 未初始化<br/>1 = 读取中<br/>2 = 已读取<br/>3 = 交互中<br/>4 = 完成</td>
+			</tr>
+			<tr>
+				<td>responseText</td>
+				<td>服务器进程返回数据的文本版本</td>
+			</tr>
+			<tr>
+				<td>responseXML</td>
+				<td>服务器进程返回数据的兼容DOM的XML文档对象</td>
+			</tr>
+			<tr>
+				<td>status</td>
+				<td>服务器返回的状态码, 如：404 = "文件末找到" 、200 ="成功"</td>
+			</tr>
+			<tr>
+				<td>statusText</td>
+				<td>服务器返回的状态文本信息</td>
+			</tr>
+		</table>
+		<h3>XMLHttpRequest兼容性处理</h3>
+		<p>var xmlhttp</p><p>if (window.XMLHttpRequest) { xmlhttp = new XMLHttpRequest(); }</p><p>else { xmlhttp = new ActiveXObject("Microosft.XMLHTTP"); }</p>
+		
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
