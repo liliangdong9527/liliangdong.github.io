@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170207 DOM(jQuery)</h1>
+		<h2>事件分类</h2>
+		<h3>1、与浏览器相关</h3>
+		<p>1)ready() 当DOM载入就绪可以查询及操纵时绑定一个要执行的函数。这个方法时是对window.load事件注册的替代方法。通过使用这个方法，可以在DOM载入就绪能够读取并操作时立即调用函数，极大提高web程序的响应速度。</p>
+		<p>2)scroll() 当用户滚动指定的元素时，会发生scroll事件。</p>
+		<p>示例：当页面滚动条变化时，执行的函数</p>
+		<p>$(window).scroll(function(){...});</p>
+		<p>3)resize() 当调整浏览器窗口的大小时，发生resize事件。</p>
+		<h3>2、与鼠标相关</h3>
+		<p>1)click() 触发每一个匹配元素的单击事件。</p>
+		<p>示例：触发页面内所有段落的点击事件。</p>
+		<p>$(window).scroll(function(){...});</p>
+		<p>2)dblclick() 触发每一个匹配元素的双击事件。</p>
+		<p>3)hover() 一个模仿悬停事件的方法。</p>
+		<p>4)mousedown/mouseup/mousemove/mouseenter/mouseout/mouseover/mouseout 鼠标相对于元素的各种状态时触发的事件。</p>
+		<p>3、与键盘相关</p>
+		<p>keydown/keyup/keypress 各种键盘按键的触发事件方法。</p>
+		<h2>事件处理</h2>
+		<h3>1、绑定事件</h3>
+		<p>1) on()方法--为所有当前以及之后的匹配元素将一个处理程序捆绑到一个事件上。</p>
+		<p>2) bind()方法--为每个匹配的元素将一个处理程序捆绑到一个或多个事件上。</p>
+		<p>3) one()方法--为每个匹配的元素将一个处理程序捆绑到一个或多个要被执行的事件上。</p>
+		<p>4) hover(over,out)方法--模拟徘徊，例如将鼠标移动到一个对象上，并将鼠标从该对象上移开。</p>
+		<p>5) trigger()方法--触发被选元素的指定事件类型。</p>
+		<p>6) live()方法--该方法为整个页面生命周期内的某一类对象绑定一个事件处理程序。</p>
+		<h3>2、绑定事件</h3>
+		<p>1) unbind()方法--该方法实现绑定相反的操作，它从每个匹配的元素中删除绑定的事件。</p>
+		<p>2) off()方法--该方法实现的是live的对立面，它删除了捆绑的live事件。</p>
+		<p>3) die()方法--die方法与live方法对应，用于解除live注册的自定义事件。</p>
+		<br />
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
