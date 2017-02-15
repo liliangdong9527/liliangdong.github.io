@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170213 Ajax详解</h1>
+		<h2>AJAX基础原理</h2>
+		<p>异步请求服务器</p>
+		<h3>1、load</h3>
+		<p>作用：通过AJAX请求从服务器加载数据，并把返回的数据放置到指定的元素中去。默认使用GET方式，若[data]参数有传递数据进去，会自动转换为POST方式。</p>
+		<p>参数：<br/>url(String):请求的HTML页的URL地址<br/>data(MAp):（可选参数）发送到服务器的key/value数据<br/>callback(Callback):（可选参数）请求完成时（不需要是success）的回调函数</p>
+		<p>通用格式：$("#link").load("http://www.baidu.com");</p>
+		<h3>2、get</h3>
+		<p>作用：发送数据给服务器，通过get请求载入信息</p>
+		<p>参数：<br/>url(String): 发送请求的URL地址<br/>data(MAp):（可选参数）发送到服务器的key/value数据<br/>callback(Callback):（可选参数）载入成功时回调函数（只有当Response的返回状态时success才调用该方法）<br />type:xml/html/json/text/jsonp（跨域）...</p>
+		<p>通用格式：$("#link").load("http://www.baidu.com");</p>
+		<h3>3、post</h3>
+		<p>参数：<br/>url(String): 发送请求的URL地址<br/>data(MAp):（可选参数）发送到服务器的key/value数据<br/>callback(Callback):（可选参数）载入成功时回调函数<br />type: 返回内容格式，xml/html/script/json/text/_default</p>
+		<p>通用格式：$.post("ex.asp",{"txt":"123"},function(data){});</p>
+		<h3>4、ajax</h3>
+		<p>ajax 在不加载整个页面的情况下，与服务器交换数据并更新部分网页</p>
+		<p>过程: <br />ajaxSend （请求发送前执行函数）<br />ajaxStart （请求开始时执行函数）<br />ajaxComplete （请求完成时执行函数）<br />ajaxStop （请求结束时执行函数）<br />ajaxError （请求发生错误时执行函数）<br />ajaxSuccess （请求成功时执行函数）</p>
+		<h3>5、其他</h3>
+		<p>serizlize/serializeArray</p>
+		<br />
+		
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
