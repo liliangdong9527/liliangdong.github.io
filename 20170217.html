@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170217 HTML5地理定位</h1>
+		<h2>HTML5 Geolocation（地理定位）用于定位用户的位置</h2>
+		<p>HTML5 Geolocation API 用于获得用户的地理位置。鉴于该特性可能侵犯用户的隐私，除非用户同意，否则用户位置信息是不可用的。</p>
+		<h3>HTML5 使用地理定位</h3>
+		<p>使用getCurrentPosition() 方法来获得用户的位置。</p>
+		<div style="width: 800px;background-color:#e3e3e3 ;">
+		<pre>&lt;script&gt;
+<span style="color: #0000ff;">var</span> <span style="color: #000000;">x=document.getElementById("demo");
+</span><span style="color: #0000ff;">function</span><span style="color: #000000;"> getLocation()
+  {
+  </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> (navigator.geolocation)
+    {
+    navigator.geolocation.getCurrentPosition(showPosition);
+    }
+  </span><span style="color: #0000ff;">else</span><span style="color: #000000;">{x.innerHTML="该浏览器不支持获取地理位置。";}
+  }
+</span><span style="color: #0000ff;">function</span><span style="color: #000000;"> showPosition(position)
+  {
+  x.innerHTML</span>="Latitude: " +<span style="color: #000000;"> position.coords.latitude</span> + 
+  "&lt;br&gt;Longitude: " +<span style="color: #000000;"> position.coords.longitude; 
+  }
+</span>&lt;/script&gt;</pre>
+
+		</div>
+		<p>
+			<ul>
+				<li>检测是否支持地理定位</li>
+				<li>如果支持，则运行 getCurrentPosition() 方法。如果不支持，则向用户反馈该浏览器不支持获取地理位置。</li>
+				<li>如果getCurrentPosition() 运行成功，则向参数showPosition中规定的函数返回一个coordinates对象</li>
+				<li>showPosition() 函数获得并显示经度和纬度</li>
+			</ul>
+		</p>
+		<h3>处理错误和拒绝</h3>
+		<p>getCurrentPosition() 方法的第二个参数用于处理错误。它规定当获取用户位置失败时运行的函数</p>
+		<div style="width: 800px;background-color:#e3e3e3 ;">
+		<pre><span style="color: #0000ff;">function</span><span style="color: #000000;"> showError(error)
+  {
+  </span><span style="color: #0000ff;">switch</span><span style="color: #000000;">(error.code) 
+    {
+    </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> error.PERMISSION_DENIED:
+      x.innerHTML</span>="用户拒绝对获取地理位置的请求。";
+      <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+    </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> error.POSITION_UNAVAILABLE:
+      x.innerHTML</span>="位置信息是不可用的。";
+      <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+    </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> error.TIMEOUT:
+      x.innerHTML</span>="请求用户地理位置超时。";
+      <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+    </span><span style="color: #0000ff;">case</span><span style="color: #000000;"> error.UNKNOWN_ERROR:
+      x.innerHTML</span>="未知错误。";
+      <span style="color: #0000ff;">break</span><span style="color: #000000;">;
+    }
+  }</span></pre>
+		</div>
+		<h3>WatchPosition</h3>
+		<p>watchPosition() - 返回用户的当前位置，并继续返回用户移动时的更新位置.</p>
+		<div style="width: 800px;background-color:#e3e3e3 ;">
+		<pre>&lt;script&gt;
+<span style="color: #0000ff;">var</span> x=document.getElementById("demo"<span style="color: #000000;">);
+</span><span style="color: #0000ff;">function</span><span style="color: #000000;"> getLocation()
+  {
+  </span><span style="color: #0000ff;">if</span><span style="color: #000000;"> (navigator.geolocation)
+    {
+    navigator.geolocation.watchPosition(showPosition);
+    }
+  </span><span style="color: #0000ff;">else</span><span style="color: #000000;">{x.innerHTML="该浏览器不支持获取地理位置。";}
+  }
+</span><span style="color: #0000ff;">function</span><span style="color: #000000;"> showPosition(position)
+  {
+  x.innerHTML</span>="纬度: " +<span style="color: #000000;"> position.coords.latitude</span> + 
+  "&lt;br&gt;经度: " +<span style="color: #000000;"> position.coords.longitude; 
+  }
+</span>&lt;/script&gt;</pre>
+</div>
+		<br />
+		
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
