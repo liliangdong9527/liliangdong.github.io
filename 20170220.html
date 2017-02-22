@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170215 cookie和WEB存储</h1>
+		<h2>JavaScript Cookies</h2>
+		<p>cookie 是存储于访问者的计算机中的变量。每当同一台计算机通过浏览器请求某个页面是，就会发送这个cookie。可以使用JavaScript来创建和取回cookie的值。</p>
+		<h3>cookie 的结构</h3>
+		<p>cookie 是以键值对的形式保存的，即key=value的格式。各个cookie之间一般是以“;”分隔。</p>
+		<p>cookie中每条cookie的存储空间为4k（因浏览器不同而有差异）</p>
+		<h2>WEB存储 localStorage</h2>
+		<p>在HTML5 中，数据不是由每个服务器请求传递的，而是只有在请求是使用数据。它使在不影响网站性能的情况下存储大量数据成为可能。对于不同的网站，数据存储于不同的区域，并且一个网站只能访问自身的数据。</p>
+		<p>localStorage方法存储的数据没有时间限制。</p>
+		<p>localStorage中一般浏览器支持的是5M大小，在不同的浏览器中localStorage会有所不同。</p>
+		<h3>localStorage的优势与局限</h3>
+		<h4>localStorage的优势</h4>
+		<p>1、localStorage拓展了cookie的4k限制</p>
+		<p>2、localStorage会将第一次请求的数据直接存储到本地，这个相当于一个5M大小的针对于前端页面的数据库，相比于cookie可以节约带宽，但是这个只有高版本的浏览器才支持</p>
+		<h4>localStorage的局限</h4>
+		<p>1、浏览器的大小不同意，并且在IE8以上的IE版本才支持localStorage属性</p>
+		<p>2、目前所有的浏览器都会把localStorage的值类型限定为string类型</p>
+		<p>3、localStorage在浏览器的隐私模式下面是不可读取的</p>
+		<p>4、localStorage本质上是对字符创的读取，如果存储内容过多的话会消耗内存空间，会导致页面变卡</p>
+		<p>5、localStorage不能被爬虫抓取到</p>
+		<h3>创建和访问 localStorage</h3>
+		<div style="width: 800px;background-color:#e3e3e3 ;">
+		<pre>&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #000000;"><<span style="color: #000000;">script</span>>
+    </span><span style="color: #0000ff;">localStorage.lastname="Smith";
+    </span><span style="color: #000000;">document.write(<span style="color: #0000ff;">localStorage.lastname</span>);
+    </span><span style="color: #000000;"><<span style="color: #000000;">script</span>>
+</span></pre>
+		</div>
+		<br />
+		
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
