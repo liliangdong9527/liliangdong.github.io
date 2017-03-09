@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		*{font-family: "微软雅黑";color: #3e3e3e;}
+		p{
+			line-height: 36px;
+		}
+		.txtBox{
+			width: 900px;
+			background-color: burlywood;
+			padding: 20px 50px;
+			border-radius: 20px;
+			margin: 0 auto;
+		}
+		
+		.title{
+			width: 800px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		p{
+			text-indent: 2em;
+		}
+		td{
+			width: 300px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="txtBox">
+		<h1 class="title">20170306 Bootstrap全局CSS样式</h1>
+		<h2>什么是Bootstrap</h2>
+		<p>Bootstrap是最受欢迎的HTML、CSS和JS的框架，用于开发响应式布局和移动设备优先的WEB项目</p>
+		<h2>全局CSS样式</h2>
+		<p>设置全局CSS样式；基本的HTML元素均可以通过class设置样式并得到增强效果；还有先进的栅格系统</p>
+		<h3>布局容器</h3>
+		<p>1、 .container 用于固定宽度并支持响应式布局的容器</p>
+		<p>2、 .container-fluid 用于100%宽度，占据全部视口（viewport）的容器</p>
+		<h3>栅格系统</h3>
+		<ul>
+			<li>“行（row）”必须包含在 .container 或 .container-fluid 中</li>
+			<li>通过“行（row）”在水平方向创建在一组“列（column）”</li>
+			<li>栅格系统中的列是通过指定1到12的值来表示其跨越的范围。例如，三个等宽的列可以使用三个 .col-xs-4 来创建</li>
+			<li>如果一“行（row）”中包含了的“列（column）”大于 12，多余的“列（column）”所在的元素将被作为一个整体另起一行排列。</li>
+		</ul>
+		<h4>栅格参数</h4>
+		<p>1、超小屏幕 手机（ <768px）： .container 最大宽度 None（自动）; 类前缀 .col-xs-</p>
+		<p>2、小屏幕 平板（>=768px）： .container 最大宽度 750px ; 类前缀 .col-sm-</p>
+		<p>3、中等屏幕 桌面显示器（>=992px）： .container 最大宽度 970px ; 类前缀 .col-md-</p>
+		<p>4、大屏幕 大桌面显示器（>=1200px）： .container 最大宽度 1170px ; 类前缀 .col-lg-</p>
+		<br />
+		
+		<a href="index.html">返回首页</a>
+		</div>
+	</body>
+</html>
